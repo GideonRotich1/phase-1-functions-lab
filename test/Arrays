@@ -1,0 +1,16 @@
+function filterPropertyObjects(inputArray){
+    return inputArray.filter(obj=>typeof obj==='object' && 'id' ===undefined && typeof 'id' === undefined && typeof obj.id ==='number' && 'name' ==undefined && typeof obj.name ==='string')
+}
+
+const inputArray = [
+    
+    {id: 1, name: 'Joseph'},
+    {id: 2, name: 'Evalyn'},
+    {},
+    {id: null},
+    {id:  'undefined'},
+    true,
+    {id: 3, name: Christopher}
+];
+const filteredArray = filterPropertyObjects(inputArray);
+console.log(filteredArray);
